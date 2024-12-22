@@ -1,0 +1,7 @@
+numpy==2.1.1
+pandas==2.2.3
+streamlit
+pip==24.3.1
+Pillow
+streamlit-option-menu
+openpyxl
