@@ -101,7 +101,7 @@ if page == "Home":
     st.title('HOW MUCH IS MY CAR COST?')
     st.write(':grey[Friday, 08 November 2023. By [gemilang.com](http://localhost:8501/%F0%9F%91%A5%20About%20Us)]')      
         
-    video_file = open("Documents\profil.mp4", "rb")
+    video_file = open("Documents/profil.mp4", "rb")
     video_bytes = video_file.read()
     st.video(video_bytes)
     
