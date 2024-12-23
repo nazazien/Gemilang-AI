@@ -101,7 +101,10 @@ if page == "Home":
     st.title('HOW MUCH IS MY CAR COST?')
     st.write(':grey[Friday, 08 November 2023. By [gemilang.com](http://localhost:8501/%F0%9F%91%A5%20About%20Us)]')      
         
-    st.video("Documents\profil.mp4")
+    video_file = open("Documents\profil.mp4", "rb")
+    video_bytes = video_file.read()
+    st.video(video_bytes)
+    
     st.subheader('Why Choose Gemilang?')
     st.write("Accuracy, convenience, and trust are at the heart of our application. Whether you’re looking to sell your TOYOTA RAV4, Corolla, or any other model, Gemilang ensures a fair price estimate. Join thousands of satisfied users who’ve successfully sold their cars with confidence using Find Your Car Price. Our platform analyzes key factors such as model, year, mileage, and engine size to deliver an accurate valuation in minutes. You no longer have to spend hours researching market trends or consulting multiple sources. With Gemilang, the process is seamless, and you save both time and effort.")
     
