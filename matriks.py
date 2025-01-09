@@ -1,6 +1,6 @@
 def transpose(matrix):
-        return list(map(list, zip(*matrix)))
-    
+    return list(map(list, zip(*matrix)))
+
 def matrix_multiplication(A, B):
     return [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]
 
@@ -17,7 +17,7 @@ def matrix_inverse(matrix):
                     break
             else:
                 raise ValueError("Matrix is singular.")
-        
+
         factor = augmented[i][i]
         augmented[i] = [x / factor for x in augmented[i]]
 
@@ -35,7 +35,7 @@ def prepare_matrices(subset, model_types, transmission_types, fuel_types):
         model_features = [1 if row['model'] == model else 0 for model in model_types]
         transmission_features = [1 if row['transmission'] == trans else 0 for trans in transmission_types]
         fuel_features = [1 if row['fuelType'] == fuel else 0 for fuel in fuel_types]
-        
+
         features = [1, row['mileage'], row['year'], row['engineSize'], row['mpg'], row['tax']]
         features.extend(model_features + transmission_features + fuel_features)
         X.append(features)
